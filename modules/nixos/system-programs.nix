@@ -4,5 +4,10 @@
 	neovim
 	git
 	zsh
+    gcc
+    nodejs
+    python3
+    pnpm
+    bun
     ];	
 }
