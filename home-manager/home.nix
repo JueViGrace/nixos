@@ -59,6 +59,7 @@
       mako
       waybar
       wofi
+      opencode
     ];
   };
 

@@ -1,5 +1,5 @@
 {inputs, ...}: {
   programs = {
-    opencode.enable = true;
+    zen-browser.enable = true;
   };
 }
