@@ -5,7 +5,9 @@
     package = pkgs.hyprland;
     systemd = {
       enable = true;
-      variables = ["--all"];
     };
+
+    config = "${pkgs.callPackage ~/.config/hypr/ {}}";
+    # plugins = [];
   };
 }

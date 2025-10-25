@@ -75,9 +75,11 @@
     networkmanager.enable = true;
     hostName = "laila";
   };
-  
+
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs system; };
+    backupFileExtension = ".bkp";
+    useUserPackages = false;
+    extraSpecialArgs = {inherit inputs outputs system;};
     users = {
       juevigrace = import ../home-manager/home.nix;
     };

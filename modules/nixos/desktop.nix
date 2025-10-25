@@ -28,7 +28,10 @@
     displayManager.defaultSession = "hyprland";
   };
 
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland = true;
+  };
 
   security.rtkit.enable = true;
 
