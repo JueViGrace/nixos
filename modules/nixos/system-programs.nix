@@ -12,6 +12,7 @@
     zoxide.enable = true;
   };
   environment.systemPackages = with pkgs; [
+    pwvucontrol
     fzf
     tmux
     zip

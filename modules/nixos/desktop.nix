@@ -24,8 +24,11 @@
       pulse.enable = true;
       jack.enable = true;
     };
+
     displayManager.defaultSession = "hyprland";
   };
 
   security.rtkit.enable = true;
+
+  security.polkit.enable = true;
 }

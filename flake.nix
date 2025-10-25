@@ -14,14 +14,19 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Zen browser flake
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
+      # to have it up-to-date or simply don't specify the nixpkgs input
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-    zen-browser,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -57,7 +62,10 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       juevigrace = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs; system = "x86_64-linux"; };
+        specialArgs = {
+          inherit inputs outputs;
+          system = "x86_64-linux";
+        };
         modules = [
           # > Our main nixos configuration file <
           ./nixos/configuration.nix

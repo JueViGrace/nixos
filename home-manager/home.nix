@@ -14,6 +14,7 @@
     # If you want to use modules your own flake exports (from modules/home-manager):
     outputs.homeManagerModules
 
+    inputs.zen-browser.homeModules.twilight
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
@@ -50,9 +51,14 @@
     username = "juevigrace";
     homeDirectory = "/home/juevigrace";
     packages = with pkgs; [
-        oh-my-zsh
-	discord
-	inputs.zen-browser.packages."${system}".default
+      discord
+      kdePackages.dolphin
+      kdePackages.qtsvg
+      kdePackages.kio-fuse
+      kdePackages.kio-extras
+      mako
+      waybar
+      wofi
     ];
   };
 
@@ -63,11 +69,11 @@
   # Enable home-manager and git
   programs.home-manager.enable = true;
   programs.git = {
-      enable = true;
-      userName = "JueViGrace";
-      extraConfig = {
-          init.defaultBranch = "master";
-      };
+    enable = true;
+    userName = "JueViGrace";
+    extraConfig = {
+      init.defaultBranch = "master";
+    };
   };
 
   # Nicely reload system units when changing configs
