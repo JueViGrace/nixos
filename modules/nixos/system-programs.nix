@@ -1,13 +1,22 @@
 { pkgs, ... }: {
+    programs = {
+	zsh.enable = true;
+	neovim.enable = true;
+    };
     environment.systemPackages = with pkgs; [
+	zip
+	unzip
+	unrar
         curl
-	neovim
 	git
-	zsh
+	lua
+	luarocks
     gcc
+	ghostty
     nodejs
     python3
     pnpm
     bun
+	go
     ];	
 }

@@ -1,1 +1,1 @@
-sudo nixos-rebuild switch --flake .#juevigrace --show-trace
+nix flake update && sudo nixos-rebuild switch --flake .#juevigrace

@@ -50,10 +50,7 @@
     username = "juevigrace";
     homeDirectory = "/home/juevigrace";
     packages = with pkgs; [
-        zip
-	unzip
-	unrar
-	oh-my-zsh
+        oh-my-zsh
 	discord
 	inputs.zen-browser.packages."${system}".default
     ];

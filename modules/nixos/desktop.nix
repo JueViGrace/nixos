@@ -3,20 +3,20 @@ services = {
     xserver = {
       enable = true;
       displayManager = {
-        lightdm = {
-          enable = true;
-          greeters.slick = {
-	    enable = true;
-	  };
-        };
+	  gdm.enable = true;
+	  #      lightdm = {
+	  #        enable = true;
+	  #        greeters.slick = {
+	  #   enable = true;
+	  # };
+	  #      };
       };
       desktopManager = {
 	gnome.enable = true; 
       };
     };
     
-    pulseaudio.enable = true;
-    security.rtkit.enable = true;
+    pulseaudio.enable = false;
     pipewire = {
 	enable = true;
 	alsa.enable = true;
@@ -25,4 +25,6 @@ services = {
 	jack.enable = true;
     };
   };
+
+  security.rtkit.enable = true;
 }
