@@ -3,5 +3,5 @@
 {
   # List your module files here
   # my-module = import ./my-module.nix;
-  imports = [./programs.nix];
+  imports = [./programs.nix ./hyprland.nix];
 }
