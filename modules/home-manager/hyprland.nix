@@ -7,7 +7,6 @@
       enable = true;
     };
 
-    config = "${pkgs.callPackage ~/.config/hypr/ {}}";
     # plugins = [];
   };
 }

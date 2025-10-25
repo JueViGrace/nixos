@@ -78,7 +78,6 @@
 
   home-manager = {
     backupFileExtension = ".bkp";
-    useUserPackages = false;
     extraSpecialArgs = {inherit inputs outputs system;};
     users = {
       juevigrace = import ../home-manager/home.nix;
