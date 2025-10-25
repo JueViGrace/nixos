@@ -1,22 +1,33 @@
-{ pkgs, ... }: {
-    programs = {
-	zsh.enable = true;
-	neovim.enable = true;
+{pkgs, ...}: {
+  programs = {
+    zsh = {
+      enable = true;
+      ohMyZsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = ["git" "tmux" "z" "fzf"];
+      };
     };
-    environment.systemPackages = with pkgs; [
-	zip
-	unzip
-	unrar
-        curl
-	git
-	lua
-	luarocks
+    neovim.enable = true;
+    zoxide.enable = true;
+  };
+  environment.systemPackages = with pkgs; [
+    fzf
+    tmux
+    zip
+    cargo
+    unzip
+    unrar
+    curl
+    git
+    lua
+    luarocks
     gcc
-	ghostty
+    ghostty
     nodejs
     python3
     pnpm
     bun
-	go
-    ];	
+    go
+  ];
 }

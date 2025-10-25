@@ -3,5 +3,5 @@
 {
   # List your module files here
   # my-module = import ./my-module.nix;
-  imports = [ ./boot.nix ./system-programs.nix ./locals.nix ./desktop.nix ];
+  imports = [ ./boot.nix ./system-programs.nix ./locals.nix ./desktop.nix ./hyprland.nix];
 }
