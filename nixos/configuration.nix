@@ -71,6 +71,8 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  boot.initrd.luks.devices."luks-94b16b3b-2518-4bd2-8d5b-aa6fff288927".device = "/dev/disk/by-uuid/94b16b3b-2518-4bd2-8d5b-aa6fff288927";
+
   networking = {
     networkmanager.enable = true;
     hostName = "laila";
