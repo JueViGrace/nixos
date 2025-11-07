@@ -60,7 +60,7 @@
       wofi
       opencode
       steam
-      minecraft-launcher
+      minecraft
     ];
   };
 
